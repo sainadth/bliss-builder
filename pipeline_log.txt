@@ -1,0 +1,562 @@
+2025-11-07 15:25:58,066 - INFO - === Bliss Builder Pipeline Started ===
+2025-11-07 15:25:58,067 - INFO - Starting pipeline run: 20251107_152558
+2025-11-07 15:25:58,068 - INFO - Output directory: D:\San\bliss-builder\output\20251107_152558
+2025-11-07 15:25:58,068 - INFO - Step 1: Fetching ASMR trends and extracting theme...
+2025-11-07 15:25:58,068 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\trend_fetching\trend_fetch.py --output-json D:\San\bliss-builder\output\20251107_152558\trends.json --output-theme D:\San\bliss-builder\output\20251107_152558\theme.txt --region US --max 50
+2025-11-07 15:26:02,395 - INFO - Script D:\San\bliss-builder\trend_fetching\trend_fetch.py completed successfully.
+2025-11-07 15:26:02,397 - INFO - Step 2: Generating narration and video...
+2025-11-07 15:26:02,398 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\video_generation\gemini_video.py --trends-json D:\San\bliss-builder\output\20251107_152558\trends.json --theme-file D:\San\bliss-builder\output\20251107_152558\theme.txt --output D:\San\bliss-builder\output\20251107_152558\asmr_video.mp4 --output-narration D:\San\bliss-builder\output\20251107_152558\narration.txt --duration 8
+2025-11-07 15:27:14,471 - INFO - Script D:\San\bliss-builder\video_generation\gemini_video.py completed successfully.
+2025-11-07 15:27:14,472 - INFO - Pipeline complete! All files saved to: D:\San\bliss-builder\output\20251107_152558
+2025-11-07 15:27:14,472 - INFO - Files created:
+2025-11-07 15:27:14,472 - INFO -   - trends.json
+2025-11-07 15:27:14,472 - INFO -   - theme.txt
+2025-11-07 15:27:14,472 - INFO -   - narration.txt
+2025-11-07 15:27:14,473 - INFO -   - asmr_video.mp4
+2025-11-07 15:27:14,473 - INFO - === Bliss Builder Pipeline Finished ===
+2025-11-07 15:32:41,755 - INFO - === Bliss Builder Pipeline Started ===
+2025-11-07 15:32:41,757 - INFO - Starting pipeline run: 20251107_153241
+2025-11-07 15:32:41,757 - INFO - Output directory: D:\San\bliss-builder\output\20251107_153241
+2025-11-07 15:32:41,757 - INFO - Step 1: Fetching ASMR trends and extracting theme...
+2025-11-07 15:32:41,757 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\trend_fetching\trend_fetch.py --output-json D:\San\bliss-builder\output\20251107_153241\trends.json --output-theme D:\San\bliss-builder\output\20251107_153241\theme.txt --region US --max 50
+2025-11-07 15:32:46,011 - INFO - Script D:\San\bliss-builder\trend_fetching\trend_fetch.py completed successfully.
+2025-11-07 15:32:46,012 - INFO - Step 2: Generating narration and video...
+2025-11-07 15:32:46,012 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\video_generation\gemini_video.py --trends-json D:\San\bliss-builder\output\20251107_153241\trends.json --theme-file D:\San\bliss-builder\output\20251107_153241\theme.txt --output D:\San\bliss-builder\output\20251107_153241\asmr_video.mp4 --output-narration D:\San\bliss-builder\output\20251107_153241\narration.txt --duration 8
+2025-11-07 15:33:55,229 - INFO - Script D:\San\bliss-builder\video_generation\gemini_video.py completed successfully.
+2025-11-07 15:33:55,230 - INFO - Pipeline complete! All files saved to: D:\San\bliss-builder\output\20251107_153241
+2025-11-07 15:33:55,231 - INFO - Files created:
+2025-11-07 15:33:55,232 - INFO -   - trends.json
+2025-11-07 15:33:55,233 - INFO -   - theme.txt
+2025-11-07 15:33:55,234 - INFO -   - narration.txt
+2025-11-07 15:33:55,234 - INFO -   - asmr_video.mp4
+2025-11-07 15:33:55,235 - INFO - === Bliss Builder Pipeline Finished ===
+2025-11-07 15:55:18,927 - INFO - === Bliss Builder Pipeline Started ===
+2025-11-07 15:55:18,928 - INFO - Starting pipeline run: 20251107_155518
+2025-11-07 15:55:18,928 - INFO - Output directory: D:\San\bliss-builder\output\20251107_155518
+2025-11-07 15:55:18,929 - INFO - Step 1: Fetching ASMR trends and extracting theme...
+2025-11-07 15:55:18,929 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\trend_fetching\trend_fetch.py --output-json D:\San\bliss-builder\output\20251107_155518\trends.json --output-theme D:\San\bliss-builder\output\20251107_155518\theme.txt --region US --max 50
+2025-11-07 15:55:19,144 - ERROR - Error running script D:\San\bliss-builder\trend_fetching\trend_fetch.py:   File "D:\San\bliss-builder\trend_fetching\trend_fetch.py", line 354
+    'crunch', 'squish
+              ^
+SyntaxError: unterminated string literal (detected at line 354)
+
+2025-11-07 15:55:19,144 - ERROR - Pipeline execution failed: Script D:\San\bliss-builder\trend_fetching\trend_fetch.py failed with error: File "D:\San\bliss-builder\trend_fetching\trend_fetch.py", line 354
+    'crunch', 'squish
+              ^
+SyntaxError: unterminated string literal (detected at line 354)
+2025-11-07 15:55:19,145 - INFO - === Bliss Builder Pipeline Finished ===
+2025-11-07 15:57:26,337 - INFO - === Bliss Builder Pipeline Started ===
+2025-11-07 15:57:26,338 - INFO - Starting pipeline run: 20251107_155726
+2025-11-07 15:57:26,339 - INFO - Output directory: D:\San\bliss-builder\output\20251107_155726
+2025-11-07 15:57:26,339 - INFO - Step 1: Fetching ASMR trends and extracting theme...
+2025-11-07 15:57:26,339 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\trend_fetching\trend_fetch.py --output-json D:\San\bliss-builder\output\20251107_155726\trends.json --output-theme D:\San\bliss-builder\output\20251107_155726\theme.txt --region US --max 50
+2025-11-07 15:57:30,549 - INFO - Script D:\San\bliss-builder\trend_fetching\trend_fetch.py completed successfully.
+2025-11-07 15:57:30,549 - INFO - Step 2: Generating narration and video...
+2025-11-07 15:57:30,550 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\video_generation\gemini_video.py --trends-json D:\San\bliss-builder\output\20251107_155726\trends.json --theme-file D:\San\bliss-builder\output\20251107_155726\theme.txt --output D:\San\bliss-builder\output\20251107_155726\asmr_video.mp4 --output-narration D:\San\bliss-builder\output\20251107_155726\narration.txt --duration 8
+2025-11-07 15:57:33,803 - ERROR - Error running script D:\San\bliss-builder\video_generation\gemini_video.py: usage: gemini_video.py [-h] --trends-json TRENDS_JSON --theme-file THEME_FILE
+                       --output OUTPUT [--output-prompt OUTPUT_PROMPT]
+                       [--duration DURATION]
+gemini_video.py: error: unrecognized arguments: --output-narration D:\San\bliss-builder\output\20251107_155726\narration.txt
+
+2025-11-07 15:57:33,804 - ERROR - Pipeline execution failed: Script D:\San\bliss-builder\video_generation\gemini_video.py failed with error: usage: gemini_video.py [-h] --trends-json TRENDS_JSON --theme-file THEME_FILE
+                       --output OUTPUT [--output-prompt OUTPUT_PROMPT]
+                       [--duration DURATION]
+gemini_video.py: error: unrecognized arguments: --output-narration D:\San\bliss-builder\output\20251107_155726\narration.txt
+2025-11-07 15:57:33,804 - INFO - === Bliss Builder Pipeline Finished ===
+2025-11-07 15:59:15,396 - INFO - === Bliss Builder Pipeline Started ===
+2025-11-07 15:59:15,398 - INFO - Starting pipeline run: 20251107_155915
+2025-11-07 15:59:15,398 - INFO - Output directory: D:\San\bliss-builder\output\20251107_155915
+2025-11-07 15:59:15,398 - INFO - Step 1: Fetching ASMR trends and extracting theme...
+2025-11-07 15:59:15,399 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\trend_fetching\trend_fetch.py --output-json D:\San\bliss-builder\output\20251107_155915\trends.json --output-theme D:\San\bliss-builder\output\20251107_155915\theme.txt --region US --max 50
+2025-11-07 15:59:19,619 - INFO - Script D:\San\bliss-builder\trend_fetching\trend_fetch.py completed successfully.
+2025-11-07 15:59:19,620 - INFO - Step 2: Generating narration and video...
+2025-11-07 15:59:19,620 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\video_generation\gemini_video.py --trends-json D:\San\bliss-builder\output\20251107_155915\trends.json --theme-file D:\San\bliss-builder\output\20251107_155915\theme.txt --output D:\San\bliss-builder\output\20251107_155915\asmr_video.mp4 --output-narration D:\San\bliss-builder\output\20251107_155915\narration.txt --duration 8
+2025-11-07 16:00:37,810 - INFO - Script D:\San\bliss-builder\video_generation\gemini_video.py completed successfully.
+2025-11-07 16:00:37,810 - INFO - Pipeline complete! All files saved to: D:\San\bliss-builder\output\20251107_155915
+2025-11-07 16:00:37,811 - INFO - Files created:
+2025-11-07 16:00:37,811 - INFO -   - trends.json
+2025-11-07 16:00:37,811 - INFO -   - theme.txt
+2025-11-07 16:00:37,811 - INFO -   - narration.txt
+2025-11-07 16:00:37,811 - INFO -   - asmr_video.mp4
+2025-11-07 16:00:37,812 - INFO - === Bliss Builder Pipeline Finished ===
+2025-11-07 16:02:30,571 - INFO - === Bliss Builder Pipeline Started ===
+2025-11-07 16:02:30,573 - INFO - Starting pipeline run: 20251107_160230
+2025-11-07 16:02:30,573 - INFO - Output directory: D:\San\bliss-builder\output\20251107_160230
+2025-11-07 16:02:30,573 - INFO - Step 1: Fetching ASMR trends and extracting theme...
+2025-11-07 16:02:30,574 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\trend_fetching\trend_fetch.py --output-json D:\San\bliss-builder\output\20251107_160230\trends.json --output-theme D:\San\bliss-builder\output\20251107_160230\theme.txt --region US --max 50
+2025-11-07 16:02:34,794 - INFO - Script D:\San\bliss-builder\trend_fetching\trend_fetch.py completed successfully.
+2025-11-07 16:02:34,795 - INFO - Step 2: Generating narration and video...
+2025-11-07 16:02:34,795 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\video_generation\gemini_video.py --trends-json D:\San\bliss-builder\output\20251107_160230\trends.json --theme-file D:\San\bliss-builder\output\20251107_160230\theme.txt --output D:\San\bliss-builder\output\20251107_160230\asmr_video.mp4 --output-narration D:\San\bliss-builder\output\20251107_160230\narration.txt --duration 8
+2025-11-07 16:03:41,767 - INFO - Script D:\San\bliss-builder\video_generation\gemini_video.py completed successfully.
+2025-11-07 16:03:41,768 - INFO - Pipeline complete! All files saved to: D:\San\bliss-builder\output\20251107_160230
+2025-11-07 16:03:41,768 - INFO - Files created:
+2025-11-07 16:03:41,768 - INFO -   - trends.json
+2025-11-07 16:03:41,768 - INFO -   - theme.txt
+2025-11-07 16:03:41,769 - INFO -   - narration.txt
+2025-11-07 16:03:41,769 - INFO -   - asmr_video.mp4
+2025-11-07 16:03:41,769 - INFO - === Bliss Builder Pipeline Finished ===
+2025-11-08 03:36:14,199 - INFO - === Bliss Builder Pipeline Started ===
+2025-11-08 03:36:14,200 - INFO - Starting pipeline run: 20251108_033614
+2025-11-08 03:36:14,200 - INFO - Output directory: D:\San\bliss-builder\output\20251108_033614
+2025-11-08 03:36:14,201 - INFO - Step 1: Fetching ASMR trends and extracting theme...
+2025-11-08 03:36:14,201 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\trend_fetching\trend_fetch.py --output-json D:\San\bliss-builder\output\20251108_033614\trends.json --output-theme D:\San\bliss-builder\output\20251108_033614\theme.txt --region US --max 50
+2025-11-08 03:36:19,679 - INFO - Script D:\San\bliss-builder\trend_fetching\trend_fetch.py completed successfully.
+2025-11-08 03:36:19,680 - INFO - Step 2: Generating narration and video...
+2025-11-08 03:36:19,680 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\video_generation\gemini_video.py --trends-json D:\San\bliss-builder\output\20251108_033614\trends.json --theme-file D:\San\bliss-builder\output\20251108_033614\theme.txt --output D:\San\bliss-builder\output\20251108_033614\asmr_video.mp4 --output-narration D:\San\bliss-builder\output\20251108_033614\narration.txt --duration 8
+2025-11-08 03:37:42,012 - INFO - Script D:\San\bliss-builder\video_generation\gemini_video.py completed successfully.
+2025-11-08 03:37:42,012 - INFO - Pipeline complete! All files saved to: D:\San\bliss-builder\output\20251108_033614
+2025-11-08 03:37:42,013 - INFO - Files created:
+2025-11-08 03:37:42,013 - INFO -   - trends.json
+2025-11-08 03:37:42,013 - INFO -   - theme.txt
+2025-11-08 03:37:42,013 - INFO -   - narration.txt
+2025-11-08 03:37:42,014 - INFO -   - asmr_video.mp4
+2025-11-08 03:37:42,014 - INFO - === Bliss Builder Pipeline Finished ===
+2025-11-08 03:41:48,348 - INFO - === Bliss Builder Pipeline Started ===
+2025-11-08 03:41:48,349 - INFO - Starting pipeline run: 20251108_034148
+2025-11-08 03:41:48,349 - INFO - Output directory: D:\San\bliss-builder\output\20251108_034148
+2025-11-08 03:41:48,350 - INFO - Step 1: Fetching ASMR trends and extracting theme...
+2025-11-08 03:41:48,350 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\trend_fetching\trend_fetch.py --output-json D:\San\bliss-builder\output\20251108_034148\trends.json --output-theme D:\San\bliss-builder\output\20251108_034148\theme.txt --region US --max 50
+2025-11-08 03:41:53,303 - INFO - Script D:\San\bliss-builder\trend_fetching\trend_fetch.py completed successfully.
+2025-11-08 03:41:53,303 - INFO - Step 2: Generating narration and video...
+2025-11-08 03:41:53,304 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\video_generation\gemini_video.py --trends-json D:\San\bliss-builder\output\20251108_034148\trends.json --theme-file D:\San\bliss-builder\output\20251108_034148\theme.txt --output D:\San\bliss-builder\output\20251108_034148\asmr_video.mp4 --output-narration D:\San\bliss-builder\output\20251108_034148\narration.txt --duration 8
+2025-11-08 03:43:13,269 - INFO - Script D:\San\bliss-builder\video_generation\gemini_video.py completed successfully.
+2025-11-08 03:43:13,270 - INFO - Pipeline complete! All files saved to: D:\San\bliss-builder\output\20251108_034148
+2025-11-08 03:43:13,270 - INFO - Files created:
+2025-11-08 03:43:13,271 - INFO -   - trends.json
+2025-11-08 03:43:13,271 - INFO -   - theme.txt
+2025-11-08 03:43:13,271 - INFO -   - narration.txt
+2025-11-08 03:43:13,272 - INFO -   - asmr_video.mp4
+2025-11-08 03:43:13,272 - INFO - === Bliss Builder Pipeline Finished ===
+2025-11-08 03:44:30,803 - INFO - === Bliss Builder Pipeline Started ===
+2025-11-08 03:44:30,806 - INFO - Starting pipeline run: 20251108_034430
+2025-11-08 03:44:30,809 - INFO - Output directory: D:\San\bliss-builder\output\20251108_034430
+2025-11-08 03:44:30,813 - INFO - Step 1: Fetching ASMR trends and extracting theme...
+2025-11-08 03:44:30,814 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\trend_fetching\trend_fetch.py --output-json D:\San\bliss-builder\output\20251108_034430\trends.json --output-theme D:\San\bliss-builder\output\20251108_034430\theme.txt --region US --max 50
+2025-11-08 03:44:35,650 - INFO - Script D:\San\bliss-builder\trend_fetching\trend_fetch.py completed successfully.
+2025-11-08 03:44:35,650 - INFO - Step 2: Generating narration and video...
+2025-11-08 03:44:35,650 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\video_generation\gemini_video.py --trends-json D:\San\bliss-builder\output\20251108_034430\trends.json --theme-file D:\San\bliss-builder\output\20251108_034430\theme.txt --output D:\San\bliss-builder\output\20251108_034430\asmr_video.mp4 --output-narration D:\San\bliss-builder\output\20251108_034430\narration.txt --duration 8
+2025-11-08 03:45:45,931 - INFO - Script D:\San\bliss-builder\video_generation\gemini_video.py completed successfully.
+2025-11-08 03:45:45,933 - INFO - Pipeline complete! All files saved to: D:\San\bliss-builder\output\20251108_034430
+2025-11-08 03:45:45,933 - INFO - Files created:
+2025-11-08 03:45:45,934 - INFO -   - trends.json
+2025-11-08 03:45:45,934 - INFO -   - theme.txt
+2025-11-08 03:45:45,934 - INFO -   - narration.txt
+2025-11-08 03:45:45,935 - INFO -   - asmr_video.mp4
+2025-11-08 03:45:45,935 - INFO - === Bliss Builder Pipeline Finished ===
+2025-11-08 03:55:54,874 - INFO - === Bliss Builder Pipeline Started ===
+2025-11-08 03:55:54,875 - INFO - Starting pipeline run: 20251108_035554
+2025-11-08 03:55:54,875 - INFO - Output directory: D:\San\bliss-builder\output\20251108_035554
+2025-11-08 03:55:54,876 - INFO - Step 1: Fetching ASMR trends and extracting theme...
+2025-11-08 03:55:54,876 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\trend_fetching\trend_fetch.py --output-json D:\San\bliss-builder\output\20251108_035554\trends.json --output-theme D:\San\bliss-builder\output\20251108_035554\theme.txt --region US --max 50
+2025-11-08 03:55:59,101 - INFO - Script D:\San\bliss-builder\trend_fetching\trend_fetch.py completed successfully.
+2025-11-08 03:55:59,101 - INFO - Step 2: Generating narration and video...
+2025-11-08 03:55:59,102 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\video_generation\gemini_video.py --trends-json D:\San\bliss-builder\output\20251108_035554\trends.json --theme-file D:\San\bliss-builder\output\20251108_035554\theme.txt --output D:\San\bliss-builder\output\20251108_035554\asmr_video.mp4 --output-narration D:\San\bliss-builder\output\20251108_035554\narration.txt --duration 8
+2025-11-08 03:57:19,536 - INFO - Script D:\San\bliss-builder\video_generation\gemini_video.py completed successfully.
+2025-11-08 03:57:19,537 - INFO - Pipeline complete! All files saved to: D:\San\bliss-builder\output\20251108_035554
+2025-11-08 03:57:19,537 - INFO - Files created:
+2025-11-08 03:57:19,539 - INFO -   - trends.json
+2025-11-08 03:57:19,539 - INFO -   - theme.txt
+2025-11-08 03:57:19,539 - INFO -   - narration.txt
+2025-11-08 03:57:19,540 - INFO -   - asmr_video.mp4
+2025-11-08 03:57:19,540 - INFO - === Bliss Builder Pipeline Finished ===
+2025-11-08 04:57:35,550 - INFO - === Bliss Builder Pipeline Started ===
+2025-11-08 04:57:35,551 - INFO - Starting pipeline run: 20251108_045735
+2025-11-08 04:57:35,552 - INFO - Output directory: D:\San\bliss-builder\output\20251108_045735
+2025-11-08 04:57:35,552 - INFO - Step 1: Fetching ASMR trends and extracting theme...
+2025-11-08 04:57:35,552 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\trend_fetching\trend_fetch.py --output-json D:\San\bliss-builder\output\20251108_045735\trends.json --output-theme D:\San\bliss-builder\output\20251108_045735\theme.txt --region US --max 50
+2025-11-08 04:57:39,883 - INFO - Script D:\San\bliss-builder\trend_fetching\trend_fetch.py completed successfully.
+2025-11-08 04:57:39,884 - INFO - Step 2: Generating narration and video...
+2025-11-08 04:57:39,884 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\video_generation\gemini_video.py --trends-json D:\San\bliss-builder\output\20251108_045735\trends.json --theme-file D:\San\bliss-builder\output\20251108_045735\theme.txt --output D:\San\bliss-builder\output\20251108_045735\asmr_video.mp4 --output-narration D:\San\bliss-builder\output\20251108_045735\narration.txt --duration 8
+2025-11-08 04:57:40,606 - INFO - === Bliss Builder Pipeline Finished ===
+2025-11-08 05:09:14,595 - INFO - === Bliss Builder Pipeline Started ===
+2025-11-08 05:09:14,596 - INFO - === Bliss Builder Pipeline Started ===
+2025-11-08 05:09:14,596 - INFO - Starting pipeline run: 20251108_050914
+2025-11-08 05:09:14,596 - INFO - Output directory: D:\San\bliss-builder\output\20251108_050914
+2025-11-08 05:09:14,596 - INFO - Step 1: Fetching ASMR trends and extracting theme...
+2025-11-08 05:09:14,597 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\trend_fetching\trend_fetch.py --output-json D:\San\bliss-builder\output\20251108_050914\trends.json --output-theme D:\San\bliss-builder\output\20251108_050914\theme.txt --region US --max 50
+2025-11-08 05:09:18,901 - INFO - Script D:\San\bliss-builder\trend_fetching\trend_fetch.py completed successfully.
+2025-11-08 05:09:18,901 - INFO - Step 2: Generating narration and video...
+2025-11-08 05:09:18,901 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\video_generation\gemini_video.py --trends-json D:\San\bliss-builder\output\20251108_050914\trends.json --theme-file D:\San\bliss-builder\output\20251108_050914\theme.txt --output D:\San\bliss-builder\output\20251108_050914\asmr_video.mp4 --output-narration D:\San\bliss-builder\output\20251108_050914\narration.txt --output-prompt D:\San\bliss-builder\output\20251108_050914\veo3_prompt.txt --duration 8
+2025-11-08 05:10:49,554 - INFO - Script D:\San\bliss-builder\video_generation\gemini_video.py completed successfully.
+2025-11-08 05:10:49,554 - INFO - Step 3: Uploading to YouTube with AI content disclosure...
+2025-11-08 05:10:49,555 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\video_upload\youtube_upload.py --video D:\San\bliss-builder\output\20251108_050914\asmr_video.mp4 --theme-file D:\San\bliss-builder\output\20251108_050914\theme.txt --narration-file D:\San\bliss-builder\output\20251108_050914\narration.txt --output-result D:\San\bliss-builder\output\20251108_050914\upload_result.json
+2025-11-08 05:10:50,732 - ERROR - Error running script D:\San\bliss-builder\video_upload\youtube_upload.py: Traceback (most recent call last):
+  File "D:\San\bliss-builder\video_upload\youtube_upload.py", line 8, in <module>
+    from google_auth_oauthlib.flow import InstalledAppFlow
+ModuleNotFoundError: No module named 'google_auth_oauthlib'
+
+2025-11-08 05:10:50,733 - ERROR - Pipeline execution failed: Script D:\San\bliss-builder\video_upload\youtube_upload.py failed with error: Traceback (most recent call last):
+  File "D:\San\bliss-builder\video_upload\youtube_upload.py", line 8, in <module>
+    from google_auth_oauthlib.flow import InstalledAppFlow
+ModuleNotFoundError: No module named 'google_auth_oauthlib'
+2025-11-08 05:10:50,733 - INFO - === Bliss Builder Pipeline Finished ===
+2025-11-08 05:10:50,733 - ERROR - Pipeline execution failed: name 'log_pipeline_result' is not defined
+2025-11-08 05:10:50,734 - INFO - === Bliss Builder Pipeline Finished ===
+2025-11-08 05:30:17,658 - INFO - === Bliss Builder Pipeline Started ===
+2025-11-08 05:30:17,659 - INFO - === Bliss Builder Pipeline Started ===
+2025-11-08 05:30:17,660 - INFO - Starting pipeline run: 20251108_053017
+2025-11-08 05:30:17,660 - INFO - Output directory: D:\San\bliss-builder\output\20251108_053017
+2025-11-08 05:30:17,660 - INFO - Step 1: Fetching ASMR trends and extracting theme...
+2025-11-08 05:30:17,660 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\trend_fetching\trend_fetch.py --output-json D:\San\bliss-builder\output\20251108_053017\trends.json --output-theme D:\San\bliss-builder\output\20251108_053017\theme.txt --region US --max 50
+2025-11-08 05:30:21,957 - INFO - Script D:\San\bliss-builder\trend_fetching\trend_fetch.py completed successfully.
+2025-11-08 05:30:21,958 - INFO - Step 2: Generating narration and video...
+2025-11-08 05:30:21,958 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\video_generation\gemini_video.py --trends-json D:\San\bliss-builder\output\20251108_053017\trends.json --theme-file D:\San\bliss-builder\output\20251108_053017\theme.txt --output D:\San\bliss-builder\output\20251108_053017\asmr_video.mp4 --output-narration D:\San\bliss-builder\output\20251108_053017\narration.txt --output-prompt D:\San\bliss-builder\output\20251108_053017\veo3_prompt.txt --duration 8
+2025-11-08 05:31:41,176 - INFO - Script D:\San\bliss-builder\video_generation\gemini_video.py completed successfully.
+2025-11-08 05:31:41,177 - INFO - Step 3: Uploading to YouTube with AI content disclosure...
+2025-11-08 05:31:41,177 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\video_upload\youtube_upload.py --video D:\San\bliss-builder\output\20251108_053017\asmr_video.mp4 --theme-file D:\San\bliss-builder\output\20251108_053017\theme.txt --narration-file D:\San\bliss-builder\output\20251108_053017\narration.txt --output-result D:\San\bliss-builder\output\20251108_053017\upload_result.json
+2025-11-08 05:31:42,702 - ERROR - Error running script D:\San\bliss-builder\video_upload\youtube_upload.py: Traceback (most recent call last):
+  File "D:\San\bliss-builder\video_upload\youtube_upload.py", line 178, in <module>
+    main()
+  File "D:\San\bliss-builder\video_upload\youtube_upload.py", line 168, in main
+    result = upload_youtube_short(args.video, theme, narration)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\San\bliss-builder\video_upload\youtube_upload.py", line 42, in upload_youtube_short
+    youtube = get_authenticated_service()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\San\bliss-builder\video_upload\youtube_upload.py", line 28, in get_authenticated_service
+    flow = InstalledAppFlow.from_client_secrets_file(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\San\bliss-builder\.venv\Lib\site-packages\google_auth_oauthlib\flow.py", line 198, in from_client_secrets_file
+    with open(client_secrets_file, "r") as json_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'youtube_credentials.json'
+
+2025-11-08 05:31:42,703 - ERROR - Pipeline execution failed: Script D:\San\bliss-builder\video_upload\youtube_upload.py failed with error: Traceback (most recent call last):
+  File "D:\San\bliss-builder\video_upload\youtube_upload.py", line 178, in <module>
+    main()
+  File "D:\San\bliss-builder\video_upload\youtube_upload.py", line 168, in main
+    result = upload_youtube_short(args.video, theme, narration)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\San\bliss-builder\video_upload\youtube_upload.py", line 42, in upload_youtube_short
+    youtube = get_authenticated_service()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\San\bliss-builder\video_upload\youtube_upload.py", line 28, in get_authenticated_service
+    flow = InstalledAppFlow.from_client_secrets_file(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\San\bliss-builder\.venv\Lib\site-packages\google_auth_oauthlib\flow.py", line 198, in from_client_secrets_file
+    with open(client_secrets_file, "r") as json_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'youtube_credentials.json'
+2025-11-08 05:31:42,705 - INFO - Logged result to D:\San\bliss-builder\output\pipeline_log.csv
+2025-11-08 05:31:42,705 - INFO - === Bliss Builder Pipeline Finished ===
+2025-11-08 05:31:42,706 - INFO - === Bliss Builder Pipeline Finished ===
+2025-11-08 05:45:38,416 - INFO - === Bliss Builder Pipeline Started ===
+2025-11-08 05:45:38,417 - INFO - === Bliss Builder Pipeline Started ===
+2025-11-08 05:45:38,417 - INFO - Starting pipeline run: 20251108_054538
+2025-11-08 05:45:38,418 - INFO - Output directory: D:\San\bliss-builder\output\20251108_054538
+2025-11-08 05:45:38,418 - INFO - Step 1: Fetching ASMR trends and extracting theme...
+2025-11-08 05:45:38,418 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\trend_fetching\trend_fetch.py --output-json D:\San\bliss-builder\output\20251108_054538\trends.json --output-theme D:\San\bliss-builder\output\20251108_054538\theme.txt --region US --max 50
+2025-11-08 05:45:42,561 - INFO - Script D:\San\bliss-builder\trend_fetching\trend_fetch.py completed successfully.
+2025-11-08 05:45:42,562 - INFO - Step 2: Generating narration and video...
+2025-11-08 05:45:42,562 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\video_generation\gemini_video.py --trends-json D:\San\bliss-builder\output\20251108_054538\trends.json --theme-file D:\San\bliss-builder\output\20251108_054538\theme.txt --output D:\San\bliss-builder\output\20251108_054538\asmr_video.mp4 --output-narration D:\San\bliss-builder\output\20251108_054538\narration.txt --output-prompt D:\San\bliss-builder\output\20251108_054538\veo3_prompt.txt --duration 8
+2025-11-08 05:47:03,831 - INFO - Script D:\San\bliss-builder\video_generation\gemini_video.py completed successfully.
+2025-11-08 05:47:03,831 - INFO - Step 3: Uploading to YouTube with AI content disclosure...
+2025-11-08 05:47:03,831 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\video_upload\youtube_upload.py --video D:\San\bliss-builder\output\20251108_054538\asmr_video.mp4 --theme-file D:\San\bliss-builder\output\20251108_054538\theme.txt --narration-file D:\San\bliss-builder\output\20251108_054538\narration.txt --output-result D:\San\bliss-builder\output\20251108_054538\upload_result.json
+2025-11-08 05:53:03,643 - INFO - === Bliss Builder Pipeline Finished ===
+2025-11-08 05:55:07,037 - INFO - === Bliss Builder Pipeline Started ===
+2025-11-08 05:55:07,038 - INFO - === Bliss Builder Pipeline Started ===
+2025-11-08 05:55:07,038 - INFO - Starting pipeline run: 20251108_055507
+2025-11-08 05:55:07,038 - INFO - Output directory: D:\San\bliss-builder\output\20251108_055507
+2025-11-08 05:55:07,039 - INFO - Step 1: Fetching ASMR trends and extracting theme...
+2025-11-08 05:55:07,039 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\trend_fetching\trend_fetch.py --output-json D:\San\bliss-builder\output\20251108_055507\trends.json --output-theme D:\San\bliss-builder\output\20251108_055507\theme.txt --region US --max 50
+2025-11-08 05:55:11,319 - INFO - Script D:\San\bliss-builder\trend_fetching\trend_fetch.py completed successfully.
+2025-11-08 05:55:11,319 - INFO - Step 2: Generating narration and video...
+2025-11-08 05:55:11,320 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\video_generation\gemini_video.py --trends-json D:\San\bliss-builder\output\20251108_055507\trends.json --theme-file D:\San\bliss-builder\output\20251108_055507\theme.txt --output D:\San\bliss-builder\output\20251108_055507\asmr_video.mp4 --output-narration D:\San\bliss-builder\output\20251108_055507\narration.txt --output-prompt D:\San\bliss-builder\output\20251108_055507\veo3_prompt.txt --duration 8
+2025-11-08 05:56:30,686 - INFO - Script D:\San\bliss-builder\video_generation\gemini_video.py completed successfully.
+2025-11-08 05:56:30,686 - INFO - Step 3: Uploading to YouTube with AI content disclosure...
+2025-11-08 05:56:30,686 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\video_upload\youtube_upload.py --video D:\San\bliss-builder\output\20251108_055507\asmr_video.mp4 --theme-file D:\San\bliss-builder\output\20251108_055507\theme.txt --narration-file D:\San\bliss-builder\output\20251108_055507\narration.txt --output-result D:\San\bliss-builder\output\20251108_055507\upload_result.json --privacy unlisted
+2025-11-08 05:56:32,121 - ERROR - Error running script D:\San\bliss-builder\video_upload\youtube_upload.py: usage: youtube_upload.py [-h] --video VIDEO --theme-file THEME_FILE
+                         [--narration-file NARRATION_FILE]
+                         [--output-result OUTPUT_RESULT]
+youtube_upload.py: error: unrecognized arguments: --privacy unlisted
+
+2025-11-08 05:56:32,121 - ERROR - Pipeline execution failed: Script D:\San\bliss-builder\video_upload\youtube_upload.py failed with error: usage: youtube_upload.py [-h] --video VIDEO --theme-file THEME_FILE
+                         [--narration-file NARRATION_FILE]
+                         [--output-result OUTPUT_RESULT]
+youtube_upload.py: error: unrecognized arguments: --privacy unlisted
+2025-11-08 05:56:32,122 - INFO - Logged result to D:\San\bliss-builder\output\pipeline_log.csv
+2025-11-08 05:56:32,122 - INFO - === Bliss Builder Pipeline Finished ===
+2025-11-08 05:56:32,123 - INFO - === Bliss Builder Pipeline Finished ===
+2025-11-08 05:59:26,689 - INFO - === Bliss Builder Pipeline Started ===
+2025-11-08 05:59:26,689 - INFO - === Bliss Builder Pipeline Started ===
+2025-11-08 05:59:26,689 - INFO - Starting pipeline run: 20251108_055926
+2025-11-08 05:59:26,690 - INFO - Output directory: D:\San\bliss-builder\output\20251108_055926
+2025-11-08 05:59:26,690 - INFO - Step 1: Fetching ASMR trends and extracting theme...
+2025-11-08 05:59:26,690 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\trend_fetching\trend_fetch.py --output-json D:\San\bliss-builder\output\20251108_055926\trends.json --output-theme D:\San\bliss-builder\output\20251108_055926\theme.txt --region US --max 50
+2025-11-08 05:59:30,856 - INFO - Script D:\San\bliss-builder\trend_fetching\trend_fetch.py completed successfully.
+2025-11-08 05:59:30,856 - INFO - Step 2: Generating narration and video...
+2025-11-08 05:59:30,857 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\video_generation\gemini_video.py --trends-json D:\San\bliss-builder\output\20251108_055926\trends.json --theme-file D:\San\bliss-builder\output\20251108_055926\theme.txt --output D:\San\bliss-builder\output\20251108_055926\asmr_video.mp4 --output-narration D:\San\bliss-builder\output\20251108_055926\narration.txt --output-prompt D:\San\bliss-builder\output\20251108_055926\veo3_prompt.txt --duration 8
+2025-11-08 06:00:50,198 - INFO - Script D:\San\bliss-builder\video_generation\gemini_video.py completed successfully.
+2025-11-08 06:00:50,198 - INFO - Step 3: Uploading to YouTube with AI content disclosure...
+2025-11-08 06:00:50,199 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\video_upload\youtube_upload.py --video D:\San\bliss-builder\output\20251108_055926\asmr_video.mp4 --theme-file D:\San\bliss-builder\output\20251108_055926\theme.txt --narration-file D:\San\bliss-builder\output\20251108_055926\narration.txt --output-result D:\San\bliss-builder\output\20251108_055926\upload_result.json --privacy unlisted
+2025-11-08 06:17:24,919 - INFO - === Bliss Builder Pipeline Started ===
+2025-11-08 06:17:24,919 - INFO - === Bliss Builder Pipeline Started ===
+2025-11-08 06:17:24,920 - INFO - Starting pipeline run: 20251108_061724
+2025-11-08 06:17:24,920 - INFO - Output directory: D:\San\bliss-builder\output\20251108_061724
+2025-11-08 06:17:24,920 - INFO - Step 1: Fetching ASMR trends and extracting theme...
+2025-11-08 06:17:24,920 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\trend_fetching\trend_fetch.py --output-json D:\San\bliss-builder\output\20251108_061724\trends.json --output-theme D:\San\bliss-builder\output\20251108_061724\theme.txt --region US --max 50
+2025-11-08 06:17:29,279 - INFO - Script D:\San\bliss-builder\trend_fetching\trend_fetch.py completed successfully.
+2025-11-08 06:17:29,279 - INFO - Step 2: Generating narration and video...
+2025-11-08 06:17:29,280 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\video_generation\gemini_video.py --trends-json D:\San\bliss-builder\output\20251108_061724\trends.json --theme-file D:\San\bliss-builder\output\20251108_061724\theme.txt --output D:\San\bliss-builder\output\20251108_061724\asmr_video.mp4 --output-narration D:\San\bliss-builder\output\20251108_061724\narration.txt --output-prompt D:\San\bliss-builder\output\20251108_061724\veo3_prompt.txt --duration 8
+2025-11-08 06:19:40,600 - INFO - Script D:\San\bliss-builder\video_generation\gemini_video.py completed successfully.
+2025-11-08 06:19:40,601 - INFO - Step 3: Uploading to YouTube with AI content disclosure...
+2025-11-08 06:19:40,601 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\video_upload\youtube_upload.py --video D:\San\bliss-builder\output\20251108_061724\asmr_video.mp4 --theme-file D:\San\bliss-builder\output\20251108_061724\theme.txt --narration-file D:\San\bliss-builder\output\20251108_061724\narration.txt --output-result D:\San\bliss-builder\output\20251108_061724\upload_result.json --privacy unlisted
+2025-11-08 06:19:40,815 - ERROR - Error running script D:\San\bliss-builder\video_upload\youtube_upload.py:   File "D:\San\bliss-builder\video_upload\youtube_upload.py", line 46
+    description = (proceed by clicking 'Advanced' \u2192 'Go to Bliss Builder Desktop (unsafe)'")
+                                                  ^
+SyntaxError: invalid character '\u2192' (U+2192)
+
+2025-11-08 06:19:40,815 - ERROR - Pipeline execution failed: Script D:\San\bliss-builder\video_upload\youtube_upload.py failed with error: File "D:\San\bliss-builder\video_upload\youtube_upload.py", line 46
+    description = (proceed by clicking 'Advanced' \u2192 'Go to Bliss Builder Desktop (unsafe)'")
+                                                  ^
+SyntaxError: invalid character '\u2192' (U+2192)
+2025-11-08 06:19:40,816 - INFO - Logged result to D:\San\bliss-builder\output\pipeline_log.csv
+2025-11-08 06:19:40,817 - INFO - === Bliss Builder Pipeline Finished ===
+2025-11-08 06:19:40,817 - INFO - === Bliss Builder Pipeline Finished ===
+2025-11-08 06:20:13,011 - INFO - === Bliss Builder Pipeline Started ===
+2025-11-08 06:20:13,012 - INFO - === Bliss Builder Pipeline Started ===
+2025-11-08 06:20:13,012 - INFO - Starting pipeline run: 20251108_062013
+2025-11-08 06:20:13,012 - INFO - Output directory: D:\San\bliss-builder\output\20251108_062013
+2025-11-08 06:20:13,013 - INFO - Step 1: Fetching ASMR trends and extracting theme...
+2025-11-08 06:20:13,013 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\trend_fetching\trend_fetch.py --output-json D:\San\bliss-builder\output\20251108_062013\trends.json --output-theme D:\San\bliss-builder\output\20251108_062013\theme.txt --region US --max 50
+2025-11-08 06:20:17,146 - INFO - Script D:\San\bliss-builder\trend_fetching\trend_fetch.py completed successfully.
+2025-11-08 06:20:17,146 - INFO - Step 2: Generating narration and video...
+2025-11-08 06:20:17,147 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\video_generation\gemini_video.py --trends-json D:\San\bliss-builder\output\20251108_062013\trends.json --theme-file D:\San\bliss-builder\output\20251108_062013\theme.txt --output D:\San\bliss-builder\output\20251108_062013\asmr_video.mp4 --output-narration D:\San\bliss-builder\output\20251108_062013\narration.txt --output-prompt D:\San\bliss-builder\output\20251108_062013\veo3_prompt.txt --duration 8
+2025-11-08 06:20:58,093 - INFO - Script D:\San\bliss-builder\video_generation\gemini_video.py completed successfully.
+2025-11-08 06:20:58,094 - INFO - Step 3: Uploading to YouTube with AI content disclosure...
+2025-11-08 06:20:58,094 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\video_upload\youtube_upload.py --video D:\San\bliss-builder\output\20251108_062013\asmr_video.mp4 --theme-file D:\San\bliss-builder\output\20251108_062013\theme.txt --narration-file D:\San\bliss-builder\output\20251108_062013\narration.txt --output-result D:\San\bliss-builder\output\20251108_062013\upload_result.json --privacy unlisted
+2025-11-08 06:20:58,301 - ERROR - Error running script D:\San\bliss-builder\video_upload\youtube_upload.py:   File "D:\San\bliss-builder\video_upload\youtube_upload.py", line 46
+    description = (proceed by clicking 'Advanced' \u2192 'Go to Bliss Builder Desktop (unsafe)'")
+                                                  ^
+SyntaxError: invalid character '\u2192' (U+2192)
+
+2025-11-08 06:20:58,302 - ERROR - Pipeline execution failed: Script D:\San\bliss-builder\video_upload\youtube_upload.py failed with error: File "D:\San\bliss-builder\video_upload\youtube_upload.py", line 46
+    description = (proceed by clicking 'Advanced' \u2192 'Go to Bliss Builder Desktop (unsafe)'")
+                                                  ^
+SyntaxError: invalid character '\u2192' (U+2192)
+2025-11-08 06:20:58,303 - INFO - Logged result to D:\San\bliss-builder\output\pipeline_log.csv
+2025-11-08 06:20:58,303 - INFO - === Bliss Builder Pipeline Finished ===
+2025-11-08 06:20:58,304 - INFO - === Bliss Builder Pipeline Finished ===
+2025-11-08 06:24:13,819 - INFO - === Bliss Builder Pipeline Started ===
+2025-11-08 06:24:13,820 - INFO - === Bliss Builder Pipeline Started ===
+2025-11-08 06:24:13,820 - INFO - Starting pipeline run: 20251108_062413
+2025-11-08 06:24:13,820 - INFO - Output directory: D:\San\bliss-builder\output\20251108_062413
+2025-11-08 06:24:13,821 - INFO - Step 1: Fetching ASMR trends and extracting theme...
+2025-11-08 06:24:13,821 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\trend_fetching\trend_fetch.py --output-json D:\San\bliss-builder\output\20251108_062413\trends.json --output-theme D:\San\bliss-builder\output\20251108_062413\theme.txt --region US --max 50
+2025-11-08 06:24:18,048 - INFO - Script D:\San\bliss-builder\trend_fetching\trend_fetch.py completed successfully.
+2025-11-08 06:24:18,048 - INFO - Step 2: Generating narration and video...
+2025-11-08 06:24:18,048 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\video_generation\gemini_video.py --trends-json D:\San\bliss-builder\output\20251108_062413\trends.json --theme-file D:\San\bliss-builder\output\20251108_062413\theme.txt --output D:\San\bliss-builder\output\20251108_062413\asmr_video.mp4 --output-narration D:\San\bliss-builder\output\20251108_062413\narration.txt --output-prompt D:\San\bliss-builder\output\20251108_062413\veo3_prompt.txt --duration 8
+2025-11-08 06:24:57,090 - INFO - Script D:\San\bliss-builder\video_generation\gemini_video.py completed successfully.
+2025-11-08 06:24:57,090 - INFO - Step 3: Uploading to YouTube with AI content disclosure...
+2025-11-08 06:24:57,091 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\video_upload\youtube_upload.py --video D:\San\bliss-builder\output\20251108_062413\asmr_video.mp4 --theme-file D:\San\bliss-builder\output\20251108_062413\theme.txt --narration-file D:\San\bliss-builder\output\20251108_062413\narration.txt --output-result D:\San\bliss-builder\output\20251108_062413\upload_result.json --privacy unlisted
+2025-11-08 06:25:16,899 - ERROR - Error running script D:\San\bliss-builder\video_upload\youtube_upload.py: Traceback (most recent call last):
+  File "D:\San\bliss-builder\video_upload\youtube_upload.py", line 195, in <module>
+    main()
+  File "D:\San\bliss-builder\video_upload\youtube_upload.py", line 185, in main
+    result = upload_youtube_short(args.video, theme, narration, args.privacy)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\San\bliss-builder\video_upload\youtube_upload.py", line 108, in upload_youtube_short
+    print(f"  \u2713 AI disclosure in description")
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2713' in position 2: character maps to <undefined>
+
+2025-11-08 06:25:16,902 - ERROR - Pipeline execution failed: Script D:\San\bliss-builder\video_upload\youtube_upload.py failed with error: Traceback (most recent call last):
+  File "D:\San\bliss-builder\video_upload\youtube_upload.py", line 195, in <module>
+    main()
+  File "D:\San\bliss-builder\video_upload\youtube_upload.py", line 185, in main
+    result = upload_youtube_short(args.video, theme, narration, args.privacy)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\San\bliss-builder\video_upload\youtube_upload.py", line 108, in upload_youtube_short
+    print(f"  \u2713 AI disclosure in description")
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2713' in position 2: character maps to <undefined>
+2025-11-08 06:25:16,906 - INFO - Logged result to D:\San\bliss-builder\output\pipeline_log.csv
+2025-11-08 06:25:16,909 - INFO - === Bliss Builder Pipeline Finished ===
+2025-11-08 06:25:16,910 - INFO - === Bliss Builder Pipeline Finished ===
+2025-11-08 06:35:36,366 - INFO - === Bliss Builder Pipeline Started ===
+2025-11-08 06:35:36,366 - INFO - === Bliss Builder Pipeline Started ===
+2025-11-08 06:35:36,368 - INFO - Starting pipeline run: 20251108_063536
+2025-11-08 06:35:36,368 - INFO - Output directory: D:\San\bliss-builder\output\20251108_063536
+2025-11-08 06:35:36,368 - INFO - Step 1: Fetching ASMR trends and extracting theme...
+2025-11-08 06:35:36,369 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\trend_fetching\trend_fetch.py --output-json D:\San\bliss-builder\output\20251108_063536\trends.json --output-theme D:\San\bliss-builder\output\20251108_063536\theme.txt --region US --max 50
+2025-11-08 06:35:40,581 - INFO - Script D:\San\bliss-builder\trend_fetching\trend_fetch.py completed successfully.
+2025-11-08 06:35:40,581 - INFO - Step 2: Generating narration and video...
+2025-11-08 06:35:40,582 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\video_generation\gemini_video.py --trends-json D:\San\bliss-builder\output\20251108_063536\trends.json --theme-file D:\San\bliss-builder\output\20251108_063536\theme.txt --output D:\San\bliss-builder\output\20251108_063536\asmr_video.mp4 --output-narration D:\San\bliss-builder\output\20251108_063536\narration.txt --output-prompt D:\San\bliss-builder\output\20251108_063536\veo3_prompt.txt --duration 8
+2025-11-08 06:36:20,430 - INFO - Script D:\San\bliss-builder\video_generation\gemini_video.py completed successfully.
+2025-11-08 06:36:20,430 - INFO - Step 3: Uploading to YouTube with AI content disclosure...
+2025-11-08 06:36:20,430 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\video_upload\youtube_upload.py --video D:\San\bliss-builder\output\20251108_063536\asmr_video.mp4 --theme-file D:\San\bliss-builder\output\20251108_063536\theme.txt --narration-file D:\San\bliss-builder\output\20251108_063536\narration.txt --output-result D:\San\bliss-builder\output\20251108_063536\upload_result.json --privacy unlisted
+2025-11-08 06:36:23,960 - INFO - Script D:\San\bliss-builder\video_upload\youtube_upload.py completed successfully.
+2025-11-08 06:36:23,961 - INFO - Step 4: Logging pipeline results...
+2025-11-08 06:36:23,972 - INFO - Logged result to D:\San\bliss-builder\output\pipeline_log.csv
+2025-11-08 06:36:23,972 - INFO - === Bliss Builder Pipeline Completed Successfully ===
+2025-11-08 06:36:23,973 - INFO - === Bliss Builder Pipeline Finished ===
+2025-11-08 06:36:23,973 - INFO - === Bliss Builder Pipeline Finished ===
+2025-11-08 06:42:53,865 - INFO - === Bliss Builder Pipeline Started ===
+2025-11-08 06:42:53,866 - INFO - === Bliss Builder Pipeline Started ===
+2025-11-08 06:42:53,866 - INFO - Starting pipeline run: 20251108_064253
+2025-11-08 06:42:53,867 - INFO - Output directory: D:\San\bliss-builder\output\20251108_064253
+2025-11-08 06:42:53,867 - INFO - Step 1: Fetching ASMR trends and extracting theme...
+2025-11-08 06:42:53,867 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\trend_fetching\trend_fetch.py --output-json D:\San\bliss-builder\output\20251108_064253\trends.json --output-theme D:\San\bliss-builder\output\20251108_064253\theme.txt --region US --max 50
+2025-11-08 06:42:58,211 - INFO - Script D:\San\bliss-builder\trend_fetching\trend_fetch.py completed successfully.
+2025-11-08 06:42:58,213 - INFO - Step 2: Generating narration and video...
+2025-11-08 06:42:58,214 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\video_generation\gemini_video.py --trends-json D:\San\bliss-builder\output\20251108_064253\trends.json --theme-file D:\San\bliss-builder\output\20251108_064253\theme.txt --output D:\San\bliss-builder\output\20251108_064253\asmr_video.mp4 --output-narration D:\San\bliss-builder\output\20251108_064253\narration.txt --output-prompt D:\San\bliss-builder\output\20251108_064253\veo3_prompt.txt --duration 8
+2025-11-08 06:44:01,459 - INFO - Script D:\San\bliss-builder\video_generation\gemini_video.py completed successfully.
+2025-11-08 06:44:01,461 - INFO - Step 3: Uploading to YouTube with AI content disclosure...
+2025-11-08 06:44:01,461 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\video_upload\youtube_upload.py --video D:\San\bliss-builder\output\20251108_064253\asmr_video.mp4 --theme-file D:\San\bliss-builder\output\20251108_064253\theme.txt --narration-file D:\San\bliss-builder\output\20251108_064253\narration.txt --output-result D:\San\bliss-builder\output\20251108_064253\upload_result.json --privacy unlisted
+2025-11-08 06:44:05,311 - INFO - Script D:\San\bliss-builder\video_upload\youtube_upload.py completed successfully.
+2025-11-08 06:44:05,313 - INFO - Step 4: Logging pipeline results...
+2025-11-08 06:44:05,343 - INFO - Logged result to D:\San\bliss-builder\output\pipeline_log.csv
+2025-11-08 06:44:05,344 - INFO - === Bliss Builder Pipeline Completed Successfully ===
+2025-11-08 06:44:05,346 - INFO - === Bliss Builder Pipeline Finished ===
+2025-11-08 06:44:05,347 - INFO - === Bliss Builder Pipeline Finished ===
+2025-11-08 06:45:56,667 - INFO - === Bliss Builder Pipeline Started ===
+2025-11-08 06:45:56,667 - INFO - === Bliss Builder Pipeline Started ===
+2025-11-08 06:45:56,668 - INFO - Starting pipeline run: 20251108_064556
+2025-11-08 06:45:56,668 - INFO - Output directory: D:\San\bliss-builder\output\20251108_064556
+2025-11-08 06:45:56,668 - INFO - Step 1: Fetching ASMR trends and extracting theme...
+2025-11-08 06:45:56,669 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\trend_fetching\trend_fetch.py --output-json D:\San\bliss-builder\output\20251108_064556\trends.json --output-theme D:\San\bliss-builder\output\20251108_064556\theme.txt --region US --max 50
+2025-11-08 06:46:00,854 - INFO - Script D:\San\bliss-builder\trend_fetching\trend_fetch.py completed successfully.
+2025-11-08 06:46:00,854 - INFO - Step 2: Generating narration and video...
+2025-11-08 06:46:00,854 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\video_generation\gemini_video.py --trends-json D:\San\bliss-builder\output\20251108_064556\trends.json --theme-file D:\San\bliss-builder\output\20251108_064556\theme.txt --output D:\San\bliss-builder\output\20251108_064556\asmr_video.mp4 --output-narration D:\San\bliss-builder\output\20251108_064556\narration.txt --output-prompt D:\San\bliss-builder\output\20251108_064556\veo3_prompt.txt --duration 8
+2025-11-08 06:46:40,349 - INFO - Script D:\San\bliss-builder\video_generation\gemini_video.py completed successfully.
+2025-11-08 06:46:40,350 - INFO - Step 3: Uploading to YouTube with AI content disclosure...
+2025-11-08 06:46:40,350 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\video_upload\youtube_upload.py --video D:\San\bliss-builder\output\20251108_064556\asmr_video.mp4 --theme-file D:\San\bliss-builder\output\20251108_064556\theme.txt --narration-file D:\San\bliss-builder\output\20251108_064556\narration.txt --output-result D:\San\bliss-builder\output\20251108_064556\upload_result.json --privacy unlisted
+2025-11-08 06:46:44,092 - INFO - Script D:\San\bliss-builder\video_upload\youtube_upload.py completed successfully.
+2025-11-08 06:46:44,092 - INFO - Step 4: Logging pipeline results...
+2025-11-08 06:46:44,103 - INFO - Logged result to D:\San\bliss-builder\output\pipeline_log.csv
+2025-11-08 06:46:44,104 - INFO - === Bliss Builder Pipeline Completed Successfully ===
+2025-11-08 06:46:44,104 - INFO - === Bliss Builder Pipeline Finished ===
+2025-11-08 06:46:44,104 - INFO - === Bliss Builder Pipeline Finished ===
+2025-11-09 23:38:53,225 - INFO - === Bliss Builder Pipeline Started ===
+2025-11-09 23:38:53,226 - INFO - === Bliss Builder Pipeline Started ===
+2025-11-09 23:38:53,226 - INFO - Starting pipeline run: 20251109_233853
+2025-11-09 23:38:53,226 - INFO - Output directory: D:\San\bliss-builder\output\20251109_233853
+2025-11-09 23:38:53,226 - INFO - Step 1: Fetching ASMR trends and extracting theme...
+2025-11-09 23:38:53,228 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\trend_fetching\trend_fetch.py --output-json D:\San\bliss-builder\output\20251109_233853\trends.json --output-theme D:\San\bliss-builder\output\20251109_233853\theme.txt --region US --max 50
+2025-11-09 23:38:57,970 - INFO - Script D:\San\bliss-builder\trend_fetching\trend_fetch.py completed successfully.
+2025-11-09 23:38:57,970 - INFO - Step 2: Generating narration and video...
+2025-11-09 23:38:57,970 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\video_generation\gemini_video.py --trends-json D:\San\bliss-builder\output\20251109_233853\trends.json --theme-file D:\San\bliss-builder\output\20251109_233853\theme.txt --output D:\San\bliss-builder\output\20251109_233853\asmr_video.mp4 --output-narration D:\San\bliss-builder\output\20251109_233853\narration.txt --output-prompt D:\San\bliss-builder\output\20251109_233853\veo3_prompt.txt --duration 8
+2025-11-09 23:40:17,652 - INFO - Script D:\San\bliss-builder\video_generation\gemini_video.py completed successfully.
+2025-11-09 23:40:17,653 - INFO - Step 3: Uploading to YouTube with AI content disclosure...
+2025-11-09 23:40:17,653 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\video_upload\youtube_upload.py --video D:\San\bliss-builder\output\20251109_233853\asmr_video.mp4 --theme-file D:\San\bliss-builder\output\20251109_233853\theme.txt --narration-file D:\San\bliss-builder\output\20251109_233853\narration.txt --output-result D:\San\bliss-builder\output\20251109_233853\upload_result.json --privacy unlisted
+2025-11-09 23:40:25,614 - INFO - Script D:\San\bliss-builder\video_upload\youtube_upload.py completed successfully.
+2025-11-09 23:40:25,615 - INFO - Step 4: Logging pipeline results...
+2025-11-09 23:40:25,628 - INFO - Logged result to D:\San\bliss-builder\output\pipeline_log.csv
+2025-11-09 23:40:25,628 - INFO - === Bliss Builder Pipeline Completed Successfully ===
+2025-11-09 23:40:25,628 - INFO - === Bliss Builder Pipeline Finished ===
+2025-11-09 23:40:25,629 - INFO - === Bliss Builder Pipeline Finished ===
+2025-11-09 23:52:18,635 - INFO - === Bliss Builder Pipeline Started ===
+2025-11-09 23:52:18,636 - INFO - === Bliss Builder Pipeline Started ===
+2025-11-09 23:52:18,636 - INFO - Starting pipeline run: 20251109_235218
+2025-11-09 23:52:18,636 - INFO - Output directory: D:\San\bliss-builder\output\20251109_235218
+2025-11-09 23:52:18,636 - INFO - Step 1: Fetching ASMR trends and extracting theme...
+2025-11-09 23:52:18,637 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\trend_fetching\trend_fetch.py --output-json D:\San\bliss-builder\output\20251109_235218\trends.json --output-theme D:\San\bliss-builder\output\20251109_235218\theme.txt --region US --max 50
+2025-11-09 23:52:22,954 - INFO - Script D:\San\bliss-builder\trend_fetching\trend_fetch.py completed successfully.
+2025-11-09 23:52:22,954 - INFO - Step 2: Generating narration and video...
+2025-11-09 23:52:22,954 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\video_generation\gemini_video.py --trends-json D:\San\bliss-builder\output\20251109_235218\trends.json --theme-file D:\San\bliss-builder\output\20251109_235218\theme.txt --output D:\San\bliss-builder\output\20251109_235218\asmr_video.mp4 --output-narration D:\San\bliss-builder\output\20251109_235218\narration.txt --output-prompt D:\San\bliss-builder\output\20251109_235218\veo3_prompt.txt --duration 8
+2025-11-09 23:53:32,892 - INFO - Script D:\San\bliss-builder\video_generation\gemini_video.py completed successfully.
+2025-11-09 23:53:32,892 - INFO - Step 3: Uploading to YouTube with AI content disclosure...
+2025-11-09 23:53:32,893 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\video_upload\youtube_upload.py --video D:\San\bliss-builder\output\20251109_235218\asmr_video.mp4 --theme-file D:\San\bliss-builder\output\20251109_235218\theme.txt --narration-file D:\San\bliss-builder\output\20251109_235218\narration.txt --output-result D:\San\bliss-builder\output\20251109_235218\upload_result.json --privacy unlisted
+2025-11-09 23:53:37,841 - INFO - Script D:\San\bliss-builder\video_upload\youtube_upload.py completed successfully.
+2025-11-09 23:53:37,841 - INFO - Step 4: Logging pipeline results...
+2025-11-09 23:53:37,853 - INFO - Logged result to D:\San\bliss-builder\output\pipeline_log.csv
+2025-11-09 23:53:37,853 - INFO - === Bliss Builder Pipeline Completed Successfully ===
+2025-11-09 23:53:37,853 - INFO - === Bliss Builder Pipeline Finished ===
+2025-11-09 23:53:37,854 - INFO - === Bliss Builder Pipeline Finished ===
+2025-11-11 09:51:12,604 - INFO - === Bliss Builder Pipeline Started ===
+2025-11-11 09:51:12,605 - INFO - === Bliss Builder Pipeline Started ===
+2025-11-11 09:51:12,605 - INFO - Starting pipeline run: 20251111_095112
+2025-11-11 09:51:12,605 - INFO - Output directory: D:\San\bliss-builder\output\20251111_095112
+2025-11-11 09:51:12,605 - INFO - Step 1: Fetching ASMR trends and extracting theme...
+2025-11-11 09:51:12,605 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\trend_fetching\trend_fetch.py --output-json D:\San\bliss-builder\output\20251111_095112\trends.json --output-theme D:\San\bliss-builder\output\20251111_095112\theme.txt --region US --max 50
+2025-11-11 09:51:17,773 - INFO - Script D:\San\bliss-builder\trend_fetching\trend_fetch.py completed successfully.
+2025-11-11 09:51:17,774 - INFO - Step 2: Generating narration and video...
+2025-11-11 09:51:17,774 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\video_generation\gemini_video.py --trends-json D:\San\bliss-builder\output\20251111_095112\trends.json --theme-file D:\San\bliss-builder\output\20251111_095112\theme.txt --output D:\San\bliss-builder\output\20251111_095112\asmr_video.mp4 --output-narration D:\San\bliss-builder\output\20251111_095112\narration.txt --output-prompt D:\San\bliss-builder\output\20251111_095112\veo3_prompt.txt --duration 8
+2025-11-11 09:51:17,998 - ERROR - Error running script D:\San\bliss-builder\video_generation\gemini_video.py:   File "D:\San\bliss-builder\video_generation\gemini_video.py", line 371
+    print("VEO 3 FAILED - Using text-based fallback")s.path.dirname(os.path.abspath(args.output_narration)), exist_ok=True)
+                                                                                                                          ^
+SyntaxError: unmatched ')'
+
+2025-11-11 09:51:17,999 - ERROR - Pipeline execution failed: Script D:\San\bliss-builder\video_generation\gemini_video.py failed with error: File "D:\San\bliss-builder\video_generation\gemini_video.py", line 371
+    print("VEO 3 FAILED - Using text-based fallback")s.path.dirname(os.path.abspath(args.output_narration)), exist_ok=True)
+                                                                                                                          ^
+SyntaxError: unmatched ')'
+2025-11-11 09:51:18,000 - INFO - Logged result to D:\San\bliss-builder\output\pipeline_log.csv
+2025-11-11 09:51:18,001 - INFO - === Bliss Builder Pipeline Finished ===
+2025-11-11 09:51:18,001 - INFO - === Bliss Builder Pipeline Finished ===
+2025-11-11 09:55:47,389 - INFO - === Bliss Builder Pipeline Started ===
+2025-11-11 09:55:47,390 - INFO - === Bliss Builder Pipeline Started ===
+2025-11-11 09:55:47,390 - INFO - Starting pipeline run: 20251111_095547
+2025-11-11 09:55:47,391 - INFO - Output directory: D:\San\bliss-builder\output\20251111_095547
+2025-11-11 09:55:47,391 - INFO - Step 1: Fetching ASMR trends and extracting theme...
+2025-11-11 09:55:47,391 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\trend_fetching\trend_fetch.py --output-json D:\San\bliss-builder\output\20251111_095547\trends.json --output-theme D:\San\bliss-builder\output\20251111_095547\theme.txt --region US --max 50
+2025-11-11 09:55:51,760 - INFO - Script D:\San\bliss-builder\trend_fetching\trend_fetch.py completed successfully.
+2025-11-11 09:55:51,761 - INFO - Step 2: Generating narration and video...
+2025-11-11 09:55:51,761 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\video_generation\gemini_video.py --trends-json D:\San\bliss-builder\output\20251111_095547\trends.json --theme-file D:\San\bliss-builder\output\20251111_095547\theme.txt --output D:\San\bliss-builder\output\20251111_095547\asmr_video.mp4 --output-narration D:\San\bliss-builder\output\20251111_095547\narration.txt --output-prompt D:\San\bliss-builder\output\20251111_095547\veo3_prompt.txt --duration 8
+2025-11-11 09:57:13,911 - INFO - Script D:\San\bliss-builder\video_generation\gemini_video.py completed successfully.
+2025-11-11 09:57:13,912 - INFO - Step 3: Uploading to YouTube with AI content disclosure...
+2025-11-11 09:57:13,912 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\video_upload\youtube_upload.py --video D:\San\bliss-builder\output\20251111_095547\asmr_video.mp4 --theme-file D:\San\bliss-builder\output\20251111_095547\theme.txt --narration-file D:\San\bliss-builder\output\20251111_095547\narration.txt --output-result D:\San\bliss-builder\output\20251111_095547\upload_result.json --privacy unlisted
+2025-11-11 09:57:20,707 - INFO - Script D:\San\bliss-builder\video_upload\youtube_upload.py completed successfully.
+2025-11-11 09:57:20,707 - INFO - Step 4: Logging pipeline results...
+2025-11-11 09:57:20,721 - INFO - Logged result to D:\San\bliss-builder\output\pipeline_log.csv
+2025-11-11 09:57:20,721 - INFO - === Bliss Builder Pipeline Completed Successfully ===
+2025-11-11 09:57:20,722 - INFO - === Bliss Builder Pipeline Finished ===
+2025-11-11 09:57:20,722 - INFO - === Bliss Builder Pipeline Finished ===
+2025-11-11 10:08:49,564 - INFO - === Bliss Builder Pipeline Started ===
+2025-11-11 10:08:49,565 - INFO - === Bliss Builder Pipeline Started ===
+2025-11-11 10:08:49,565 - INFO - Starting pipeline run: 20251111_100849
+2025-11-11 10:08:49,565 - INFO - Output directory: D:\San\bliss-builder\output\20251111_100849
+2025-11-11 10:08:49,566 - INFO - Step 1: Fetching ASMR trends and extracting theme...
+2025-11-11 10:08:49,566 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\trend_fetching\trend_fetch.py --output-json D:\San\bliss-builder\output\20251111_100849\trends.json --output-theme D:\San\bliss-builder\output\20251111_100849\theme.txt --region US --max 50
+2025-11-11 10:08:54,344 - INFO - Script D:\San\bliss-builder\trend_fetching\trend_fetch.py completed successfully.
+2025-11-11 10:08:54,344 - INFO - Step 2: Generating narration and video...
+2025-11-11 10:08:54,345 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\video_generation\gemini_video.py --trends-json D:\San\bliss-builder\output\20251111_100849\trends.json --theme-file D:\San\bliss-builder\output\20251111_100849\theme.txt --output D:\San\bliss-builder\output\20251111_100849\asmr_video.mp4 --output-narration D:\San\bliss-builder\output\20251111_100849\narration.txt --output-prompt D:\San\bliss-builder\output\20251111_100849\veo3_prompt.txt --duration 8
+2025-11-11 10:09:32,042 - INFO - Script D:\San\bliss-builder\video_generation\gemini_video.py completed successfully.
+2025-11-11 10:09:32,042 - INFO - Step 3: Uploading to YouTube with AI content disclosure...
+2025-11-11 10:09:32,042 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\video_upload\youtube_upload.py --video D:\San\bliss-builder\output\20251111_100849\asmr_video.mp4 --theme-file D:\San\bliss-builder\output\20251111_100849\theme.txt --narration-file D:\San\bliss-builder\output\20251111_100849\narration.txt --output-result D:\San\bliss-builder\output\20251111_100849\upload_result.json --privacy unlisted
+2025-11-11 10:09:35,831 - INFO - Script D:\San\bliss-builder\video_upload\youtube_upload.py completed successfully.
+2025-11-11 10:09:35,831 - INFO - Step 4: Logging pipeline results...
+2025-11-11 10:09:35,845 - INFO - Logged result to D:\San\bliss-builder\output\pipeline_log.csv
+2025-11-11 10:09:35,845 - INFO - === Bliss Builder Pipeline Completed Successfully ===
+2025-11-11 10:09:35,846 - INFO - === Bliss Builder Pipeline Finished ===
+2025-11-11 10:09:35,846 - INFO - === Bliss Builder Pipeline Finished ===
+2025-11-11 10:36:59,598 - INFO - === Bliss Builder Pipeline Started ===
+2025-11-11 10:36:59,598 - INFO - === Bliss Builder Pipeline Started ===
+2025-11-11 10:36:59,599 - INFO - Starting pipeline run: 20251111_103659
+2025-11-11 10:36:59,599 - INFO - Output directory: D:\San\bliss-builder\output\20251111_103659
+2025-11-11 10:36:59,599 - INFO - Step 1: Fetching ASMR trends and extracting theme...
+2025-11-11 10:36:59,600 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\trend_fetching\trend_fetch.py --output-json D:\San\bliss-builder\output\20251111_103659\trends.json --output-theme D:\San\bliss-builder\output\20251111_103659\theme.txt --region US --max 50
+2025-11-11 10:37:05,336 - INFO - Script D:\San\bliss-builder\trend_fetching\trend_fetch.py completed successfully.
+2025-11-11 10:37:05,336 - INFO - Step 2: Generating narration and video...
+2025-11-11 10:37:05,337 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\video_generation\gemini_video.py --trends-json D:\San\bliss-builder\output\20251111_103659\trends.json --theme-file D:\San\bliss-builder\output\20251111_103659\theme.txt --output D:\San\bliss-builder\output\20251111_103659\asmr_video.mp4 --output-narration D:\San\bliss-builder\output\20251111_103659\narration.txt --output-prompt D:\San\bliss-builder\output\20251111_103659\veo3_prompt.txt --duration 8
+2025-11-11 10:39:58,518 - INFO - Script D:\San\bliss-builder\video_generation\gemini_video.py completed successfully.
+2025-11-11 10:39:58,519 - INFO - Step 3: Uploading to YouTube with AI content disclosure...
+2025-11-11 10:39:58,519 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\video_upload\youtube_upload.py --video D:\San\bliss-builder\output\20251111_103659\asmr_video.mp4 --theme-file D:\San\bliss-builder\output\20251111_103659\theme.txt --narration-file D:\San\bliss-builder\output\20251111_103659\narration.txt --output-result D:\San\bliss-builder\output\20251111_103659\upload_result.json --privacy unlisted
+2025-11-11 10:40:14,204 - INFO - Script D:\San\bliss-builder\video_upload\youtube_upload.py completed successfully.
+2025-11-11 10:40:14,205 - INFO - Step 4: Logging pipeline results...
+2025-11-11 10:40:14,230 - INFO - Logged result to D:\San\bliss-builder\output\pipeline_log.csv
+2025-11-11 10:40:14,231 - INFO - === Bliss Builder Pipeline Completed Successfully ===
+2025-11-11 10:40:14,231 - INFO - === Bliss Builder Pipeline Finished ===
+2025-11-11 10:40:14,231 - INFO - === Bliss Builder Pipeline Finished ===
+2025-11-11 11:29:08,652 - INFO - === Bliss Builder Pipeline Started ===
+2025-11-11 11:29:08,653 - INFO - === Bliss Builder Pipeline Started ===
+2025-11-11 11:29:08,653 - INFO - Starting pipeline run: 20251111_112908
+2025-11-11 11:29:08,653 - INFO - Output directory: D:\San\bliss-builder\output\20251111_112908
+2025-11-11 11:29:08,654 - INFO - Step 1: Fetching ASMR trends and extracting theme...
+2025-11-11 11:29:08,654 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\trend_fetching\trend_fetch.py --output-json D:\San\bliss-builder\output\20251111_112908\trends.json --output-theme D:\San\bliss-builder\output\20251111_112908\theme.txt --region US --max 50
+2025-11-11 11:29:13,327 - INFO - Script D:\San\bliss-builder\trend_fetching\trend_fetch.py completed successfully.
+2025-11-11 11:29:13,327 - INFO - Step 2: Generating narration and video...
+2025-11-11 11:29:13,327 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\video_generation\gemini_video.py --trends-json D:\San\bliss-builder\output\20251111_112908\trends.json --theme-file D:\San\bliss-builder\output\20251111_112908\theme.txt --output D:\San\bliss-builder\output\20251111_112908\asmr_video.mp4 --output-narration D:\San\bliss-builder\output\20251111_112908\narration.txt --output-prompt D:\San\bliss-builder\output\20251111_112908\veo3_prompt.txt --duration 8
+2025-11-11 11:31:56,420 - INFO - Script D:\San\bliss-builder\video_generation\gemini_video.py completed successfully.
+2025-11-11 11:31:56,421 - INFO - Step 3: Uploading to YouTube as PUBLIC Short with AI disclosure...
+2025-11-11 11:31:56,421 - INFO - Running command: D:\San\bliss-builder\.venv\Scripts\python.exe D:\San\bliss-builder\video_upload\youtube_upload.py --video D:\San\bliss-builder\output\20251111_112908\asmr_video.mp4 --theme-file D:\San\bliss-builder\output\20251111_112908\theme.txt --narration-file D:\San\bliss-builder\output\20251111_112908\narration.txt --output-result D:\San\bliss-builder\output\20251111_112908\upload_result.json --privacy public
+2025-11-11 11:32:10,133 - INFO - Script D:\San\bliss-builder\video_upload\youtube_upload.py completed successfully.
+2025-11-11 11:32:10,134 - INFO - Step 4: Logging pipeline results...
+2025-11-11 11:32:10,145 - INFO - Logged result to D:\San\bliss-builder\output\pipeline_log.csv
+2025-11-11 11:32:10,145 - INFO - === Bliss Builder Pipeline Completed Successfully ===
+2025-11-11 11:32:10,145 - INFO - === Bliss Builder Pipeline Finished ===
+2025-11-11 11:32:10,146 - INFO - === Bliss Builder Pipeline Finished ===
