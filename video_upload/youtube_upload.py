@@ -194,8 +194,8 @@ def main():
     parser.add_argument("--theme-file", required=True, help="Path to theme.txt")
     parser.add_argument("--narration-file", help="Path to narration.txt (optional)")
     parser.add_argument("--output-result", help="Path to save upload result JSON")
-    parser.add_argument("--privacy", default="unlisted", choices=["public", "unlisted", "private"],
-                       help="Privacy status (default: unlisted)")
+    parser.add_argument("--privacy", default="public", choices=["public", "unlisted", "private"],
+                       help="Privacy status (default: public)")
     args = parser.parse_args()
     
     # Validate video file

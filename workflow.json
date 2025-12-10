@@ -1,0 +1,756 @@
+{
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 13
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -192,
+        80
+      ],
+      "id": "ef597683-a6a6-4fce-949f-766125249218",
+      "name": "Config - Init"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "351ba192-2a77-4955-8c70-04d3cc67d779",
+              "name": "timestamp",
+              "value": "={{ $now.format('MM_dd_yyyy_HH_mm_ss') }}",
+              "type": "string"
+            },
+            {
+              "id": "1100a8de-76d7-4b2f-9738-413bcff1f718",
+              "name": "venv",
+              "value": "D:\\San\\bliss-builder\\.venv\\Scripts\\python.exe",
+              "type": "string"
+            },
+            {
+              "id": "f096763c-d8c9-4e77-adaa-3496b0146415",
+              "name": "homeDir",
+              "value": "D:\\San\\bliss-builder",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        32,
+        72
+      ],
+      "id": "42502086-5dec-4222-addd-f9facceb1cf6",
+      "name": "Config - Paths",
+      "alwaysOutputData": false,
+      "executeOnce": false,
+      "retryOnFail": false,
+      "notesInFlow": false
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "You are an ASMR trend analyst. Use the Tool - Fetch Trends tool to get trending ASMR videos from YouTube. Parse the JSON output and extract the theme for video generation. Return a JSON object with a 'status' field and a 'theme' field. Example: { \"status\": \"success\", \"theme\": \"Whispering Forest ASMR\" }. If an error occurs, return { \"status\": \"error\", \"error\": \"[error message]\" }. Do not return plain text or any other format.",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3,
+      "position": [
+        928,
+        72
+      ],
+      "id": "388a82c8-a26f-4606-9294-a7d575632949",
+      "name": "Agent - Trend Analyst",
+      "alwaysOutputData": false,
+      "retryOnFail": true,
+      "waitBetweenTries": 5000,
+      "notesInFlow": false
+    },
+    {
+      "parameters": {
+        "model": "llama-3.3-70b-versatile",
+        "options": {
+          "temperature": 0.4
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGroq",
+      "typeVersion": 1,
+      "position": [
+        936,
+        296
+      ],
+      "id": "16c14d46-51fc-4b98-a0dc-c8ceda05c169",
+      "name": "Model - Analyst (70b)",
+      "credentials": {
+        "groqApi": {
+          "id": "mDTwLcTNpoUxJYl0",
+          "name": "Groq account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "toolDescription": "Fetches trending ASMR videos from YouTube and extracts a creative theme for video generation. Returns JSON with theme, trends_count, and top_trends.",
+        "executeOnce": false,
+        "command": "={{ $('Config - Paths').item.json.venv }} {{ $('Config - Paths').item.json.homeDir }}\\agents\\fetch_agent.py"
+      },
+      "type": "n8n-nodes-base.executeCommandTool",
+      "typeVersion": 1,
+      "position": [
+        1064,
+        296
+      ],
+      "id": "7475d2aa-13ad-40db-b2e1-a472fdf7e975",
+      "name": "Tool - Fetch Trends"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "You are a video generator. Use the Tool - Generate Video with the theme from the previous step. This will take 5-10 minutes as Veo 3 generates the video. Return a JSON object with a 'status' field and a 'video_path' field. Example: { \"status\": \"success\", \"video_path\": \"D:/output/video.mp4\" }. If an error occurs, return { \"status\": \"error\", \"error\": \"[error message]\" }.",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3,
+      "position": [
+        1728,
+        -52
+      ],
+      "id": "2db78ecc-3875-4b42-8203-a7e054eca5c8",
+      "name": "Agent - Video Producer",
+      "retryOnFail": true,
+      "alwaysOutputData": false,
+      "executeOnce": true,
+      "maxTries": 2,
+      "waitBetweenTries": 5000,
+      "notesInFlow": false
+    },
+    {
+      "parameters": {
+        "model": "llama-3.3-70b-versatile",
+        "options": {
+          "temperature": 0.7
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGroq",
+      "typeVersion": 1,
+      "position": [
+        1736,
+        172
+      ],
+      "id": "fc203fb5-4b48-423e-80b8-f42353f2fbfb",
+      "name": "Model - Producer (70b)",
+      "credentials": {
+        "groqApi": {
+          "id": "mDTwLcTNpoUxJYl0",
+          "name": "Groq account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "toolDescription": "Generates 8-second ASMR video using Veo 3 AI. Takes a theme as input. Returns JSON with video_path and narration.",
+        "executeOnce": "",
+        "command": "={{ $('Config - Paths').item.json.venv }} {{ $('Config - Paths').item.json.homeDir }}\\agents\\video_gen_agent.py --theme \"{{ $('Check - Trend Fetch Status').item.json.theme }}\" --output-file \"{{ $('Config - Output Path').item.json.outputDir }}\\video_metadata.json\""
+      },
+      "type": "n8n-nodes-base.executeCommandTool",
+      "typeVersion": 1,
+      "position": [
+        1864,
+        172
+      ],
+      "id": "55c26075-4033-490f-a4a4-770d3a24f8b9",
+      "name": "Tool - Generate Video"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "You are a YouTube uploader. Use the Tool - Upload Video to upload the video. \"Return a JSON object with a 'status' field and a 'video_url' field. Example: { \"status\": \"success\", \"video_url\": \"https://youtube.com/shorts/xyz\\\" }. If an error occurs, return { \"status\": \"error\", \"error\": \"[error message]\" }.\"",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3,
+      "position": [
+        2528,
+        -176
+      ],
+      "id": "809255ef-f94d-4779-a2d6-c25a711cb579",
+      "name": "Agent - YouTube Publisher",
+      "retryOnFail": true,
+      "waitBetweenTries": 2000
+    },
+    {
+      "parameters": {
+        "model": "llama-3.3-70b-versatile",
+        "options": {
+          "temperature": 0.4
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGroq",
+      "typeVersion": 1,
+      "position": [
+        2536,
+        48
+      ],
+      "id": "eb87b732-7fd7-4a40-b0d1-d605e34290fa",
+      "name": "Model - Publisher (70b)",
+      "credentials": {
+        "groqApi": {
+          "id": "mDTwLcTNpoUxJYl0",
+          "name": "Groq account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "executeOnce": false,
+        "command": "={{ $('Config - Paths').item.json.venv }} {{ $('Config - Paths').item.json.homeDir }}\\agents\\upload_agent.py --video-path \"{{ $('Parse Video Output').item.json.video_path }}\" --theme \"{{ $('Parse Trend Output').item.json.theme }}\" --privacy public"
+      },
+      "type": "n8n-nodes-base.executeCommandTool",
+      "typeVersion": 1,
+      "position": [
+        2664,
+        48
+      ],
+      "id": "78f96eb7-cfeb-41ad-b54d-2dc9293b325e",
+      "name": "Tool - Upload Video"
+    },
+    {
+      "parameters": {
+        "amount": 1
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        704,
+        72
+      ],
+      "id": "c7fd982f-f47c-4f9c-9c1f-d89c816cd22d",
+      "name": "System - Wait Buffer",
+      "webhookId": "9b601fe5-1a42-4072-bbb6-f9be8bfeac64"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "8de29244-87a9-4093-9519-3129964eed12",
+              "name": "outputDir",
+              "value": "={{ $json.homeDir + '\\\\output\\\\' + $json.timestamp }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        256,
+        72
+      ],
+      "id": "faf7548b-498d-4a17-9e3f-45f60f321687",
+      "name": "Config - Output Path"
+    },
+    {
+      "parameters": {
+        "command": "=mkdir  {{ $json.outputDir }}"
+      },
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        480,
+        72
+      ],
+      "id": "a4dfb268-4dff-4410-8c87-c8612d865346",
+      "name": "System - Create Folders"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "6e3d16fb-531e-48ac-9ad7-0099f566f024",
+              "name": "status",
+              "value": "Execution Ended",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        3552,
+        -52
+      ],
+      "id": "913f45d2-594f-4f8b-9483-f489a3703512",
+      "name": "Execution ended"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "7a187036-2c6f-4b61-99d8-98737374b595",
+              "leftValue": "={{ $json.status }}",
+              "rightValue": "success",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1504,
+        72
+      ],
+      "id": "7eebe7bb-cba0-4b0a-b016-b10d318d9274",
+      "name": "Check - Trend Fetch Status"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Parse the JSON string from the output field\nconst item = $input.first();\nconst parsed = JSON.parse(item.json.output);\n\nreturn {\n  json: parsed\n};"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1280,
+        72
+      ],
+      "id": "a6f20912-ab38-440f-85f2-2aac2b21a11e",
+      "name": "Parse Trend Output"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Parse the JSON string from the output field\nconst item = $input.first();\nconst parsed = JSON.parse(item.json.output);\n\nreturn {\n  json: parsed\n};"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2080,
+        -52
+      ],
+      "id": "a5984f92-0a66-46fd-82bb-6281c5fd4612",
+      "name": "Parse Video Output"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Parse the JSON string from the output field\nconst item = $input.first();\nconst parsed = JSON.parse(item.json.output);\n\nreturn {\n  json: parsed\n};"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2880,
+        -176
+      ],
+      "id": "8307eaa3-7971-4bf0-8a85-2baf807c4a8f",
+      "name": "Parse Publish Output"
+    },
+    {
+      "parameters": {
+        "sendTo": "pmakerasmr@gmail.com",
+        "subject": "✅ ASMR Video Workflow Completed Successfully",
+        "message": "=Hello, \n\n<h2>🎬 ASMR Video Generation Workflow Completed</h2>\n\n<p><strong>Status:</strong> ✅ Success</p>\n\n<h3>📊 Details:</h3>\n<ul>\n  <li><strong>Theme:</strong> {{ $('Parse Trend Output').item.json.theme }}</li>\n  <li><strong>Video Path:</strong> {{ $('Parse Video Output').item.json.video_path }}</li>\n  <li><strong>Timestamp:</strong> {{ $('Config - Init').item.json.timestamp }}</li>\n</ul>\n\n<h3>📁 Output Location:</h3>\n<p>{{ $json.video_url }}</p>\n\n<hr>\n<p><em>This is an automated notification from your N8N ASMR Video Generation Workflow.</em></p>\n\nRegards,\nbliss-builder(mail-agent).",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        3328,
+        -224
+      ],
+      "id": "18f416b7-b22a-47ab-a530-2d94da701238",
+      "name": "Alert - Workflow Sucess",
+      "webhookId": "dcf0fae0-c32a-41f1-84e3-c4a450d97a54",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "Q0XgKl7BwVyLaQqY",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sendTo": "pmakerasmr@gmail.com",
+        "subject": "❌ASMR Video Workflow Failed",
+        "message": "=Hello,\n\n<h2>❌ Workflow FAILED</h2> \n<p><strong>Workflow:</strong> {{$workflow.name}}</p> \n<p><strong>Execution ID:</strong> {{$execution.id}}</p> \n<p><strong>Error:</strong> {{$json.error ?? 'See execution log in n8n'}}</p> <hr> <p><em>Check n8n logs for full details.</em></p>\n\nRegards,\nbliss-builder(mail-agent).",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        3328,
+        120
+      ],
+      "id": "5a1a071c-f9fd-47ed-aefc-bb9b3442542e",
+      "name": "Alert - Workflow Failed",
+      "webhookId": "dcf0fae0-c32a-41f1-84e3-c4a450d97a54",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "Q0XgKl7BwVyLaQqY",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "8351fa39-4189-4000-9a5d-379f213fd16b",
+              "leftValue": "={{ $json.status }}",
+              "rightValue": "success",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        2304,
+        -52
+      ],
+      "id": "f64cc228-da6d-44d6-a6f4-20c574c6c31d",
+      "name": "Check - Video Produce Status"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "4dd4998b-1ef6-40ef-b396-ff695cef5cdf",
+              "leftValue": "={{ $json.status }}",
+              "rightValue": "success",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        3104,
+        -176
+      ],
+      "id": "92d4ee95-38b8-4df0-b4e9-cb803e5b6110",
+      "name": "Check - Video Publish Status"
+    }
+  ],
+  "connections": {
+    "Config - Init": {
+      "main": [
+        [
+          {
+            "node": "Config - Paths",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Config - Paths": {
+      "main": [
+        [
+          {
+            "node": "Config - Output Path",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Agent - Trend Analyst": {
+      "main": [
+        [
+          {
+            "node": "Parse Trend Output",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Model - Analyst (70b)": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Agent - Trend Analyst",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tool - Fetch Trends": {
+      "ai_tool": [
+        [
+          {
+            "node": "Agent - Trend Analyst",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Agent - Video Producer": {
+      "main": [
+        [
+          {
+            "node": "Parse Video Output",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Model - Producer (70b)": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Agent - Video Producer",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tool - Generate Video": {
+      "ai_tool": [
+        [
+          {
+            "node": "Agent - Video Producer",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Agent - YouTube Publisher": {
+      "main": [
+        [
+          {
+            "node": "Parse Publish Output",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Model - Publisher (70b)": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Agent - YouTube Publisher",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tool - Upload Video": {
+      "ai_tool": [
+        [
+          {
+            "node": "Agent - YouTube Publisher",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "System - Wait Buffer": {
+      "main": [
+        [
+          {
+            "node": "Agent - Trend Analyst",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Config - Output Path": {
+      "main": [
+        [
+          {
+            "node": "System - Create Folders",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "System - Create Folders": {
+      "main": [
+        [
+          {
+            "node": "System - Wait Buffer",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check - Trend Fetch Status": {
+      "main": [
+        [
+          {
+            "node": "Agent - Video Producer",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Alert - Workflow Failed",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Trend Output": {
+      "main": [
+        [
+          {
+            "node": "Check - Trend Fetch Status",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Video Output": {
+      "main": [
+        [
+          {
+            "node": "Check - Video Produce Status",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Publish Output": {
+      "main": [
+        [
+          {
+            "node": "Check - Video Publish Status",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Alert - Workflow Sucess": {
+      "main": [
+        [
+          {
+            "node": "Execution ended",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Alert - Workflow Failed": {
+      "main": [
+        [
+          {
+            "node": "Execution ended",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check - Video Produce Status": {
+      "main": [
+        [
+          {
+            "node": "Agent - YouTube Publisher",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Alert - Workflow Failed",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check - Video Publish Status": {
+      "main": [
+        [
+          {
+            "node": "Alert - Workflow Sucess",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Alert - Workflow Failed",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "03a96a355f0cf4690c86d8ceb1daec642c3604feac2a1fb2c3be4b1466c63b79"
+  }
+}
